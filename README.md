@@ -3,7 +3,6 @@
 Audio-related, tools and utilities written in Python for electronic music production. I solve these problems as I see fit. Maybe some day It will become a web-application. I am only getting started.
 
 ## Goals
----
 
 - Automate processes requiring automation
 - WRITE CLEANER CODE
@@ -65,7 +64,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Spencer Finkel** - *FSU IT student* - [GitHub](https://github.com/MushinMiscellanea)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+<!--See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.-->
 
 <!--## License
 
