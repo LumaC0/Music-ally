@@ -7,6 +7,7 @@ def instructions_query():
     notation = notation.upper()
     return notation
 
+# interprets whether the input is an acceptable note in the step_note_freq list
 def interpret(notation, step_note_freq):
     if notation in [item for sublist in step_note_freq for item in sublist]:
         for sublist in step_note_freq:
@@ -15,7 +16,28 @@ def interpret(notation, step_note_freq):
             else: continue
         return step
     else: print('not a musical note')
-    
+
+#returns the complete octive series
+def octive(arg):
+    print()
+    series = [arg]
+    if arg > 16.35:
+        arg1 = arg
+        for oct in range(8):
+            arg1/=2
+            series.insert(0, arg1)
+        for oct in range(8):
+            arg *= 2
+            series.append(arg)
+    else: 
+        for oct in range(8): 
+            arg *= 2
+            series.append(arg)
+    series1 = [item for item in series if item <= 7902.13 and item >= 1.00]
+    #[enumerate(item) for item in series if item >= 16.35]
+    return series1
+
+
 ''' try:
 pass step
 except expression as identifier:

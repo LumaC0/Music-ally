@@ -1,8 +1,22 @@
-#frequency of all notes in a scale
-'''for i in range(13):
+import csv
+import pandas as pd
+import matplotlib as mt
+
+pitch = pd.read_csv('/Users/spencerfinkel/repos/musically/pitch_freq.csv')
+pitch = pitch.rename(columns={'Unnamed: 2': 'Octive'})
+p = (list(pitch))
+freq = pitch['Frequency (Hz)']
+
+freq.()
+
+
+
+
+'''#frequency of all notes in a scale
+for i in range(13):
     freq = 16.35
     freq1 = freq*((2**(1/12))**i)
-    print(f'{freq1:.2f}')'''
+    print(f'{freq1:.2f}')
 
 
 #list comprehension, whole octive frequencies
@@ -24,7 +38,7 @@ def minor_freq(*args):
         else:
             print(f'{freq1:.2f}')
 
-freq=244
+
 minor_freq(freq)
 print()
 
@@ -32,10 +46,25 @@ print()
 #all the octaves of the frequency
 def octive(arg):
     print()
-    series = [freq, ]
-    for i in range(8):
-        arg *= 2
-        series.append(arg)
-    print(series)
+    series = [arg]
+    if arg > 16.35:
+        arg1 = arg
+        for oct in range(8):
+            arg1/=2
+            series.insert(0, arg1)
+        for oct in range(8):
+            arg *= 2
+            series.append(arg)
+    else: 
+        for oct in range(8): 
+            arg *= 2
+            series.append(arg)
+    series1 = [item for item in series if item <= 7902.13 and item >= 1.00]
+    #[enumerate(item) for item in series if item >= 16.35]
+    print(series1)
 
-octive(freq)
+def main():
+    freq = float(input('What frequency are you looking for: '))
+    octive(freq)
+
+main()'''
