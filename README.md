@@ -11,6 +11,9 @@ Audio-related, tools and utilities written in Python for electronic music produc
 ### Dependancies
 
 * `Pipenv` Virtual Environment and depandency manager
+* `csv` for reading and writing .csv files (standard library)
+* `pandas` to analyze data in a dataframe structure
+* `matplotlib` for visualization and such
 * More to come...
 
 
@@ -19,7 +22,7 @@ Audio-related, tools and utilities written in Python for electronic music produc
 install Pipenv!
 
 ```
-$ pip3 install pipenv
+$ pip3 install pipenv pandas matplotlib
 ```
 
 <!--## Running the tests
